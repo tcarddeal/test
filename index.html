@@ -5,22 +5,22 @@
 </head>
 <body>
 <script type="text/javascript">
-	console.log(navigator.geolocation);
-	// function error(err) {
-	// 	alert(err.message);
 
-	// }
-	// function success(pos) {
-	// 	alert(`${pos.coords.latitute}`,`${pos.coords.longitute}`);
-	// }
-	// function getlocation() {
-	// 	if () {
-	// 		navigator.geolocation.getCurrentPosition(success, error);
-	// 	}else{
-	// 		alert('notwork')
-	// 	}
-	// }
-	// getlocation();
+	function error(err) {
+		alert(err.message);
+
+	}
+	function success(pos) {
+		alert(`${pos.coords.latitute}`,`${pos.coords.longitute}`);
+	}
+	function getlocation() {
+		if (navigator.geolocation) {
+			navigator.geolocation.getCurrentPosition(success, error);
+		}else{
+			alert('notwork');
+		}
+	}
+	getlocation();
 </script>
 </body>
 </html>
