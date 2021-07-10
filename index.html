@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Geolocation</title>
+</head>
+<body>
+<script type="text/javascript">
+	function error(err) {
+		alert(err.message);
+
+	}
+	function success(pos) {
+		alert(`${pos.coords.latitute}`,`${pos.coords.longitute}`);
+	}
+	function getlocation() {
+		if (navigator.geolocation) {
+			navigator.geolocation.getCurrentPosition(success, error);
+		}else{
+			alert('notwork')
+		}
+	}
+	getlocation();
+</script>
+</body>
+</html>
